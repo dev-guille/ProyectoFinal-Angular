@@ -1,0 +1,100 @@
+header{
+    height: 500px;
+}
+.portada{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+section{
+    position: absolute;
+    top: 0;
+    height: 150px;
+    background-color: #001d3dc8;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    width: 100px;
+    height: 100px;
+    margin-left: 30px;
+}
+a{
+    text-decoration: none;
+    padding: 10px;
+    margin-right: 30px;
+    color: white;
+    font-size: 2vw;
+}
+a:hover{
+    color: #FFC300;
+    /* border-bottom: 1px solid white;
+    margin-bottom: -40px; */
+}
+
+/* Para pantallas grandes (LG) - 1024px a 1200px */
+@media(min-width: 1024px) and (max-width: 1200px){
+    header{
+        height: 400px;
+    }
+    .portada{
+        height: 400px;
+    }
+    section{
+        height: 120px;
+    }
+    .logo{
+        width: 80px;
+        height: 80px;
+    }
+    a{
+        font-size: 1.8vw;
+    }
+}
+
+/* Para pantallas Medianas (MD) - 768px a 1023px */
+@media(min-width: 768px) and (max-width: 1023px){
+    header{
+        height: 300px;
+    }
+    .portada{
+        height: 300px;
+    }
+    section{
+        height: 100px;
+    }
+    .logo{
+        width: 70px;
+        height: 70px;
+    }
+    a{
+        font-size: 2vw;
+    }
+}
+
+/* Para pantallas Pequeñas (SM) - Menos de 768px */
+@media(max-width: 767px){
+    header{
+        height: 200px;
+    }
+    .portada{
+        height: 200px;
+    }
+    section{
+        height: 80px;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .logo{
+        width: 50px;
+        height: 50px;
+        margin-left: 0;
+    }
+    a{
+        font-size: 2.8vw;
+        margin-right: 0;
+        padding: 10px;
+    }
+}

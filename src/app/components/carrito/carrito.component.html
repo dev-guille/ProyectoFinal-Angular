@@ -1,0 +1,32 @@
+<article>
+    <h1>Carrito de Compra</h1>
+    
+        <section>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Descripción</th>
+                        <th>Imagen</th>
+                        <th>Precio</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for(producto of carrito; track $index){
+                    <tr>
+                        <td><p>{{producto.nombre}}</p></td>
+                        <td><p>{{producto.descripcion}}</p></td>
+                        <td><img [src]="producto.imagenURL" alt=""></td>
+                        <td><p>{{producto.precio}}</p></td>
+                        <td> <button class="btn-remover" (click)="removerObjeto(producto.id)">Remover producto</button></td>
+                    </tr>
+                   
+                }
+                </tbody>
+            </table>            
+            
+        </section>
+    
+    <button (click)="limpiarCarrito()">Limpiar carrito</button>
+</article>

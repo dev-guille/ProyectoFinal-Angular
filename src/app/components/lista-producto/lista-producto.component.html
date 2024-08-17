@@ -1,0 +1,19 @@
+<article>  
+    <nav>
+        <h1>Productos</h1>
+        <button class="btn-verde" routerLink="/carrito">Carrito</button>
+    </nav>
+    <section>
+        @for(producto of productos; track $index){
+            <div>
+                <h2>{{producto.nombre}}</h2>
+                <span>{{producto.descripcion}}</span>
+                <img [src]="producto.imagenURL" alt="">
+                <span>Q. {{producto.precio}}.00</span>
+                <hr>
+                <button (click)="agregarACarrito(producto)">Añadir a carrito</button>
+                <button class="btn-verde" [routerLink]="['/producto', producto.id]">Ver Detalles</button>
+            </div>
+        }
+    </section>
+</article>

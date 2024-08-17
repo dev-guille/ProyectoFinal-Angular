@@ -1,0 +1,37 @@
+article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+section{
+    width: 100%;
+}
+img{
+    width: 100px;
+}
+table{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    border-collapse: collapse;
+    margin: 20px 0px;
+}
+thead{
+    background-color: #007bff;
+    color: white;
+}
+th{
+    padding: 12px;
+}
+tr{
+    border-bottom: 1px solid #ddd;
+}
+.btn-remover{
+    background-color: red;
+    padding: 8px;
+}
